@@ -1,0 +1,73 @@
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align:center;
+  background-color:black;
+}
+.navbar {
+  overflow: hidden;
+  text-align: center;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:1;
+}
+.navbar a {
+  display: inline-block;
+  color: #eeeeee;
+  padding: 20px 10%;
+  text-decoration: none;
+  font-size: 18px;
+}
+.navbar a:hover {
+  color: lightblue;
+}
+.container {
+  background: url(/Users/deanshaw/Desktop/deanpshaw.com/9c2be5e906642774bbbab849856613b51809b6d3.jpg);
+  margin-top: 62px;
+  text-align:center;
+}
+
+.transbox {
+  padding:20px;
+  background-color: lightskyblue; opacity:.7;
+}
+.transbox h1 {
+  font-size:60px;
+}
+.transbox p {
+  font-size:25px;
+  font-weight: bold;
+  color: black;
+}
+#thewholething {
+  padding-top:20px;
+  padding-bottom:20px;
+}
+#rightThing p {
+  padding:20px;
+}
+#rightThing p a {
+  color:white;
+}
+
+#rightThing h1 {
+  padding:20px;
+}
+#leftThing h1 {
+  padding:20px;
+}
+
+
+
+  
