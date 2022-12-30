@@ -12,9 +12,9 @@
 <body>
 
     <div class="navbar">
-        <a href="#DeanShaw">Dean Shaw.</a>
-        <a href="#Details">Details.</a>
-        <a href="#Projects">Projects.</a>
+        <a href="#Details">About</a>
+        <a href="#Projects">Projects</a>
+        <a href="#Contact">Contact</a>
     </div>
 
     <div class="container">
@@ -23,7 +23,7 @@
                 CREATIVE VISUALIZATIONS
             </h1>
             <p>
-                By : Dean Shaw
+                A Portfolio By : Dean Shaw
             </p>
         </div>
     </div>
@@ -31,13 +31,14 @@
 
     <div id="containerMiddle">
         <div id="about">
-            <h2>About Me.</h2>
+            <h2>about.</h2>
             <p>
-                My name is Dean Shaw and this is my art portfolio. 
-                Every piece of work found on this page was done by me. 
-                Ranging many mediums and styles, my portfolio is comprised of photos, 
-                drawings, paintings, and digital artwork. Most of these works were completed from 2019-2022. 
-                Thanks for viewing and I hope you enjoy.
+                My name is Dean Shaw and this is my portfolio. I am currently a student at the University of Washington studying Business with the hopes
+                of pursing computer science. This page is meant to give insight into my creative projects and provide an alternate perspective of myself.
+                Every piece of work found on this page was done by me including the site itself with the exception of the photo of the day. Ranging many 
+                mediums and styles, my portfolio is comprised of photos, drawings, paintings, videos, animations, and digital artwork. 
+                Most of these works were completed from 2019 - Present. I most enjoy creating projects that give a sense of a distored reality, combining
+                sci-fi or futurisitc elements with everyday items. Thank you for viewing and I hope you enjoy.
             </p>
         </div>
     </div>
@@ -79,7 +80,7 @@
             .then((response) => response.json())
             .then((jsonData) => {
                 console.log(jsonData);
-                imageElement.src = jsonData[0].urls.raw;
+                imageElement.src = jsonData[0].urls.small;
                 imageLink.setAttribute("href", jsonData[0].links.html);
                 creator.innerText = jsonData[0].user.name;
                 creator.setAttribute("href", jsonData[0].user.links.html);
