@@ -28,54 +28,10 @@
         </div>
     </div>
 
-    <div id="thewholething">
-        <div id="leftThing" style="float:left; width:30%;color:white; padding:2.5%;">
-            <h1>Saying Of The Day</h1>
-            <p>
-            </p>
-        </div>
-        <div id="content" style="float:left; width:30%; height:100%;">
-            <video width=100% height=100% autoplay loop muted>
-                <source src="video/video1.mp4" type="video/mp4"/>
-            </video>
-        </div>
-        <div id="rightThing" style="float:right; width:30%; color:white; padding:2.5%;">
-                <h1>Photo Of The Day</h1>
-                <div id="img-container">
-                    <a id = "imageLink" href="#">
-                        <img alt="" id="unsplashImage" style = "width:100%;height:auto;"/>
-                    </a>
-                </div>
-                <p class = "imageDetails"> Photo by <a id = "creator" href="#">NAME</a> on <a href="https://www.unsplash.com">Unsplash</a></p>
-        </div>
-    </div>
-    <script>
-        let count = "1";
-        let id = "8894005";
-        let clientID = "3wfMQye9GHnpQX1qYxRbw8RecrIb03zj-IQq2Bp2qv8";
-        let endpoint = `https://api.unsplash.com/photos/random/?collections=${id}&count=${count}&client_id=${clientID}`;
-        // 8894005
-        
-        let imageElement = document.querySelector("#unsplashImage");
-        let imageLink = document.querySelector("#imageLink");
-        let creator = document.querySelector("#creator");
-        
-        fetch(endpoint)
-            .then((response) => response.json())
-            .then((jsonData) => {
-                imageElement.src = jsonData[0].urls.raw;
-                imageLink.setAttribute("href", jsonData[0].links.html);
-                creator.innerText = jsonData[0].user.name;
-                creator.setAttribute("href", jsonData[0].user.portfolio_url);
-            })
-            .catch((error) => {
-                console.log("Error: " + error);
-            });
-    </script>
-<!--
-    <div class="containerMiddle">
-        <div id="section-1">
-            <h2>About.</h2>
+
+    <div id="containerMiddle">
+        <div id="about">
+            <h2>About Me.</h2>
             <p>
                 My name is Dean Shaw and this is my art portfolio. 
                 Every piece of work found on this page was done by me. 
@@ -85,6 +41,61 @@
             </p>
         </div>
     </div>
+
+    <div id="thewholething">
+        <div id="leftThing" style="float:left; width:30%;color:white; padding:0% 2.5% 2.5% 2.5%;">
+            <h1>Saying Of The Day</h1>
+            <p>
+            </p>
+        </div>
+        <div id="content" style="float:left; width:30%; height:100%;">
+            <video width=100% height=100% autoplay loop muted>
+                <source src="video/video1.mp4" type="video/mp4"/>
+            </video>
+        </div>
+        <div id="rightThing" style="float:right; width:30%; color:white; padding:0% 2.5% 2.5% 2.5%;">
+                <h1>Photo Of The Day</h1>
+                <div id="img-container">
+                    <a id = "imageLink" href="#">
+                        <img alt="" id="unsplashImage" style = "width:100%;height:auto;"/>
+                    </a>
+                </div>
+                <a id = "description" href="#">Description</a>
+                <p class = "imageDetails"> Photo by <a id = "creator" href="#">NAME</a> on <a href="https://www.unsplash.com">Unsplash</a></p>
+        </div>
+    </div>
+    <script>
+        let count = "1";
+        let id = "8894005";
+        let clientID = "3wfMQye9GHnpQX1qYxRbw8RecrIb03zj-IQq2Bp2qv8";
+        let endpoint = `https://api.unsplash.com/photos/random/?collections=${id}&count=${count}&client_id=${clientID}`;
+        // 8894005
+        let imageDescription = document.querySelector("#description");
+        let imageElement = document.querySelector("#unsplashImage");
+        let imageLink = document.querySelector("#imageLink");
+        let creator = document.querySelector("#creator");
+        
+        fetch(endpoint)
+            .then((response) => response.json())
+            .then((jsonData) => {
+                console.log(jsonData);
+                imageElement.src = jsonData[0].urls.raw;
+                imageLink.setAttribute("href", jsonData[0].links.html);
+                creator.innerText = jsonData[0].user.name;
+                creator.setAttribute("href", jsonData[0].user.links.html);
+                if(jsonData[0].alt_description != null) {
+                    imageDescription.innerText = `"` + jsonData[0].alt_description + `"`;
+                } else if (jsonData[0].description != null) {
+                    imageDescription.innerText = `"` + jsonData[0].description + `"`;
+                } else {
+                    imageDescription.innerText = "";
+                }
+            })
+            .catch((error) => {
+                console.log("Error: " + error);
+            });
+    </script>
+
 
     <div id="section-2">
         <h2>Projects.</h2>

@@ -53,14 +53,22 @@ body {
   color: black;
 }
 #thewholething {
-  padding-top:20px;
+  padding-top:0px;
   padding-bottom:20px;
 }
 #rightThing p {
-  padding:20px;
+  padding:10px 20px 20px 20px;
+}
+#img-container {
+  padding-bottom:10px;
 }
 #rightThing p a {
   color:white;
+}
+#description {
+  color:white;
+  padding:0px 10px 0px 10px;
+  text-decoration:none;
 }
 
 #rightThing h1 {
@@ -70,6 +78,21 @@ body {
   padding:20px;
 }
 
+#containerMiddle {
+  border-radius:20px;
+  padding:20px 50px 20px 50px;
+  margin:20px 40px 20px 40px;
+  background-color:lightslategray;
+  text-align:center;
+  color:black;
+}
+#containerMiddle h2 {
+  padding-bottom: 20px;
+  text-decoration:underline;
+}
+#containerMiddle p {
+  padding: 0px 5px 0px 5px;
+}
 
 
   
