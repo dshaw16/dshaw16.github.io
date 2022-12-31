@@ -56,6 +56,12 @@ body {
   padding-top:0px;
   padding-bottom:20px;
 }
+#rightThing h1 {
+  font-size: clamp(15px, 3vw, 28px);
+}
+#leftThing h1 {
+  font-size: clamp(15px, 3vw, 28px);
+}
 #rightThing p {
   padding:10px 20px 20px 20px;
 }
@@ -81,10 +87,10 @@ body {
 #containerMiddle {
   border-radius:20px;
   padding:20px 50px 20px 50px;
-  margin:20px 40px 20px 40px;
-  background-color:lightslategray;
+  margin:20px 2.5% 20px 2.5%;
+  background-color:gray;
   text-align:center;
-  color:black;
+  color:white;
 }
 #containerMiddle h2 {
   padding-bottom: 20px;
@@ -92,6 +98,11 @@ body {
 }
 #containerMiddle p {
   padding: 0px 5px 0px 5px;
+  text-align:center;
+}
+
+#about p {
+  font-size: 18px;
 }
 
 

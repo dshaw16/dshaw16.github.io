@@ -23,7 +23,7 @@
                 CREATIVE VISUALIZATIONS
             </h1>
             <p>
-                A Portfolio By : Dean Shaw
+                A Portfolio By Dean Shaw
             </p>
         </div>
     </div>
@@ -58,44 +58,14 @@
                 <h1>Photo Of The Day</h1>
                 <div id="img-container">
                     <a id = "imageLink" href="#">
-                        <img alt="" id="unsplashImage" style = "width:100%;height:auto;"/>
+                        <img alt="" id="unsplashImage" src="photo/photo2.jpg" style="width:100%;height:auto;"/>
                     </a>
                 </div>
-                <a id = "description" href="#">Description</a>
-                <p class = "imageDetails"> Photo by <a id = "creator" href="#">NAME</a> on <a href="https://www.unsplash.com">Unsplash</a></p>
+                <a id = "description" href="#">"night, outer space, nature"</a>
+                <p class = "imageDetails"> Photo by <a id = "creator" href="https://unsplash.com/@louisgaudiau">Louis Gaudiau</a> on <a href="https://www.unsplash.com">Unsplash</a></p>
         </div>
     </div>
-    <script>
-        let count = "1";
-        let id = "8894005";
-        let clientID = "3wfMQye9GHnpQX1qYxRbw8RecrIb03zj-IQq2Bp2qv8";
-        let endpoint = `https://api.unsplash.com/photos/random/?collections=${id}&count=${count}&client_id=${clientID}`;
-        // 8894005
-        let imageDescription = document.querySelector("#description");
-        let imageElement = document.querySelector("#unsplashImage");
-        let imageLink = document.querySelector("#imageLink");
-        let creator = document.querySelector("#creator");
-        
-        fetch(endpoint)
-            .then((response) => response.json())
-            .then((jsonData) => {
-                console.log(jsonData);
-                imageElement.src = jsonData[0].urls.small;
-                imageLink.setAttribute("href", jsonData[0].links.html);
-                creator.innerText = jsonData[0].user.name;
-                creator.setAttribute("href", jsonData[0].user.links.html);
-                if(jsonData[0].alt_description != null) {
-                    imageDescription.innerText = `"` + jsonData[0].alt_description + `"`;
-                } else if (jsonData[0].description != null) {
-                    imageDescription.innerText = `"` + jsonData[0].description + `"`;
-                } else {
-                    imageDescription.innerText = "";
-                }
-            })
-            .catch((error) => {
-                console.log("Error: " + error);
-            });
-    </script>
+
 
 
     <div id="section-2">
@@ -110,7 +80,20 @@
             linkdn
         </p>
     </div>
+    <script>
+        let imageDescription = document.querySelector("#description");
+        let imageElement = document.getElementById("unsplashImage");
+        let imageLink = document.querySelector("#imageLink");
+        let creator = document.querySelector("#creator");
+        
+        imageElement.setAttribute("src", localStorage.getItem("source"));
+        imageLink.setAttribute("href", localStorage.getItem("href"));
+        creator.innerText = localStorage.getItem("name");
+        creator.setAttribute("href", localStorage.getItem("nameHref"));
+        imageDescription.innerText = localStorage.getItem("description");
 
+        resetAtMidnight();
+    </script>
 
 -->
 
