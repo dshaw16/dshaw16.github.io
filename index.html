@@ -7,17 +7,20 @@
     <title>Dean Shaw's Portfolio</title>
     <link rel="stylesheet" href="deanpshaw.css">
     <script src="deanpshaw.js"></script>
-    
 <head>
 <body>
 
     <div class="navbar">
-        <a href="#Details">About</a>
-        <a href="#Projects">Projects</a>
-        <a href="#Contact">Contact</a>
+        <a href="#section-1">About</a>
+        <a href="#section-2">Creations</a>
+        <a id="topref" href="#top">Dean Shaw</a>
+        <a href="#section-3">Process</a>
+        <a href="#footer">Contact</a>
     </div>
+    <div id="top">
 
-    <div class="container">
+    </div>
+    <div class="topcontainer">
         <div class="transbox">
             <h1>
                 CREATIVE VISUALIZATIONS
@@ -28,21 +31,15 @@
         </div>
     </div>
 
-
-    <div id="containerMiddle">
-        <div id="about">
-            <h2>about.</h2>
-            <p>
-                My name is Dean Shaw and this is my portfolio. I am currently a student at the University of Washington studying Business with the hopes
-                of pursing computer science. This page is meant to give insight into my creative projects and provide an alternate perspective of myself.
-                Every piece of work found on this page was done by me including the site itself with the exception of the photo of the day. Ranging many 
-                mediums and styles, my portfolio is comprised of photos, drawings, paintings, videos, animations, and digital artwork. 
-                Most of these works were completed from 2019 - Present. I most enjoy creating projects that give a sense of a distored reality, combining
-                sci-fi or futurisitc elements with everyday items. Thank you for viewing and I hope you enjoy.
-            </p>
-        </div>
+    <div id="section-1">
+        <h1 id="about">Physical & Digital Artist from<br>California to Seattle</h1>
+        <p>
+            Welcome to my art portfolio! 
+            Here you will find a variety of artworks in both physical and digital formats, including paintings, drawings, and animations. 
+            I hope you enjoy exploring my creations.
+        </p>
     </div>
-
+<!--
     <div id="thewholething">
         <div id="leftThing" style="float:left; width:30%;color:white; padding:0% 2.5% 2.5% 2.5%;">
             <h1>Saying Of The Day</h1>
@@ -65,22 +62,69 @@
                 <p class = "imageDetails"> Photo by <a id = "creator" href="https://unsplash.com/@louisgaudiau">Louis Gaudiau</a> on <a href="https://www.unsplash.com">Unsplash</a></p>
         </div>
     </div>
-
-
-
+-->
     <div id="section-2">
-        <h2>Projects.</h2>
-        <p>
-            Drawings
-        </p>
+        <h1 id="Projects">Creations</h1>
+        <h2 id="type">Black & White</h2>
+            <div class="image-grid">
+                <div class = "container1">
+                    <img class="photo1" src="photo/MONO/statues.png">
+                    <div class="caption">Looking To The Past</div>
+                </div>
+                <div class = "container2">
+                    <img class="photo2"src="photo/MONO/desk.png">
+                    <div class="caption">Lunch</div>
+                </div>
+                <div class = "container3">
+                    <img class="photo3" src="photo/MONO/drapes.png">
+                    <div class="caption"></div>
+                </div>
+                <div class = "container4">
+                    <img class="photo4"src="photo/MONO/kitchen.png">
+                    <div class="caption">A Dancing Kitchen</div>
+                </div>
+                <div class = "container5">
+                    <img class="photo5"src="photo/MONO/audi.png">
+                    <div class="caption">Audi R8</div>
+                </div>
+                <div class = "container6">
+                    <img class="photo6"src="photo/MONO/xray.png">
+                    <div class="caption">X-Ray</div>
+                </div>
+                <div class = "container7">
+                    <img class="photo7"src="photo/MONO/drawer.png">
+                    <div class="caption">Lost in a Drawer</div>
+                </div>
+                <div class = "container8">
+                    <img class="photo8"src="photo/MONO/face2.png">
+                    <div class="caption">Scream</div>
+                </div>
+                <div class = "container9">
+                    <img class="photo9"src="photo/MONO/face1.png">
+                    <div class="caption">A Stranger</div>
+                </div>
+
+            </div>
+        </div>
+<!--
+            <img src="photo/MONO/desk2.png">
+            <img src="photo/MONO/audi.png">
+            <img src="photo/MONO/watch.png">
+            <img src="photo/MONO/drapes.png">
+            <img src="photo/MONO/statues.png">
+            <img src="photo/MONO/science.png">
+-->
+        </div>
     </div>
 
     <div id="section-3">
-        <p>
-            linkdn
-        </p>
+        <h1 id="Process">Process</h1>
     </div>
+    
+
     <script>
+
+    /*
         let imageDescription = document.querySelector("#description");
         let imageElement = document.getElementById("unsplashImage");
         let imageLink = document.querySelector("#imageLink");
@@ -93,13 +137,9 @@
         imageDescription.innerText = localStorage.getItem("description");
 
         resetAtMidnight();
+    */
     </script>
-
--->
-
-    <!-- Footer starts
-    <footer>
+    <footer id="footer">
     </footer>
-     Footer ends-->
 </body>
 </html>
