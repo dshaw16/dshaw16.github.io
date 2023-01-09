@@ -239,11 +239,12 @@ body {
   padding-bottom:20px;
   font-family:'Times New Roman', Times, serif;
 }
-#footer p {
+
+#leftFoot a {
   display:inline-block;
-  text-decoration:underline;
+  color:white;
 }
-#footer p:hover {
+#leftFoot a:hover {
   color:lightblue;
   cursor:pointer;
 }
@@ -266,7 +267,7 @@ body {
 #rightFoot a:hover {
   color:lightblue;
 }
-#rightFoot a, #leftFoot a {
+#rightFoot a, #leftFoot p {
   text-decoration:none;
   color:white;
   display:block;
