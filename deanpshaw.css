@@ -201,6 +201,10 @@ body {
   background-size:contain;
   text-align:center;
 }
+
+.lightbox video {
+  width:80%;
+}
 .lightbox p {
   float:right;
   margin:auto;
