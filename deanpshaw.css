@@ -219,6 +219,8 @@ body {
 .lightboxvid video {
   width:70%;
   max-height:40em;
+  cursor:default;
+  z-index:10000;
 }
 .lightbox p, .lightboxvid p {
   float:right;
