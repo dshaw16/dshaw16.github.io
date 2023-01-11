@@ -213,14 +213,11 @@ body {
   background-size:contain;
   justify-content: center;
   align-items:center;
-  
 
 }
 .lightboxvid video {
   width:70%;
   max-height:40em;
-  cursor:default;
-  z-index:10000;
 }
 .lightbox p, .lightboxvid p {
   float:right;
